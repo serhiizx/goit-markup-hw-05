@@ -942,10 +942,7 @@ address {
   transform: translateY(-50%);
   fill: currentColor;
   pointer-events: none;
-  opacity: 0;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-icon.icon {
   left: 19px;
   opacity: 1;
 }
@@ -1038,13 +1035,19 @@ input[type="checkbox"]:checked
   fill: var(--color-success);
 }
 
-.modal-form-icon.error {
+.modal-form-icon-error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
   right: 19px;
   fill: transparent;
 }
 
 .modal-form-textarea:user-invalid,
-.modal-form-input:user-invalid ~ .error {
+.modal-form-input:user-invalid ~ .modal-form-icon-error {
   opacity: 1;
 }
 
