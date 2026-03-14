@@ -911,15 +911,16 @@ address {
 }
 
 .modal-form-wrapper {
+  margin-bottom: 8px;
 }
 .modal-form-label {
   display: block;
-  margin-bottom: 8px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  margin-bottom: 4px;
 }
 .modal-form-field {
   position: relative;
@@ -927,18 +928,19 @@ address {
 }
 .modal-form-input {
   width: 100%;
-  padding: 22px 40px;
   font-size: 12px;
   color: #2e2f43;
-
+  height: 40px;
+  background-color: transparent;
+  padding-left: 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
   border: 1px solid #2e2f4266;
   border-radius: 4px;
-
-  transition: var(--anim-fast);
-  transition-property: border-color;
-  height: 40px;
   max-height: 40px;
+}
+.modal-form-input:focus {
+  border-color: #4d5ae5;
 }
 .modal-form-input:focus {
   border-color: #4e5ae5;
