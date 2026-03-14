@@ -547,10 +547,8 @@
             </li>
           </ul>
         </div>
-      </div>
-      <!-- Modal window -->
-      <div class="backdrop">
-        <div class="modal">
+        <!-- Modal window -->
+        <div class="backdrop is-open">
           <p class="modal-caption">Subscribe</p>
 
           <button class="modal-close-btn" type="button">
@@ -581,60 +579,53 @@
               </span>
             </div>
 
-            <div class="modal-form-wrapper">
-              <label class="modal-form-label" for="user-email">Email</label>
-              <div class="modal-form-field">
-                <input
-                  class="modal-form-input"
-                  type="email"
-                  id="user-email"
-                  name="user-email"
-                  required
-                  placeholder=""
-                >
-                <svg class="modal-form-icon" width="12" height="12">
-                  <use href="./images/icons.svg#email"></use>
-                </svg>
-                <svg class="modal-form-icon error" width="12" height="12">
-                  <use href="./images/icons.svg#error"></use>
-                </svg>
-                <span class="error-message"> Email is not valid. </span>
-              </div>
-            </div>
-
-            <div class="modal-form-wrapper">
-              <label class="modal-form-label" for="user-phone">
-                Phone number
-              </label>
-              <div class="modal-form-field">
-                <input
-                  class="modal-form-input"
-                  type="text"
-                  required
-                  id="user-phone"
-                  name="user-phone"
-                >
-                <svg class="modal-form-icon" width="13" height="13">
-                  <use href="./images/icons.svg#phone"></use>
-                </svg>
-              </div>
-            </div>
-
-            <div class="modal-form-wrapper">
-              <label class="modal-form-label" for="user-comment">Comment</label>
-              <textarea
-                class="modal-form-comment"
-                name="user-comment"
-                id="user-comment"
-                placeholder="Text input"
-                rows="4"
+            <label class="modal-form-label" for="user-email">Email</label>
+            <div class="modal-form-field">
+              <input
+                class="modal-form-input"
+                type="email"
+                id="user-email"
+                name="user-email"
                 required
-                minlength="10"
-                maxlength="2000"
-              ></textarea>
+                placeholder=""
+              >
+              <svg class="modal-form-icon" width="12" height="12">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+              <svg class="modal-form-icon error" width="12" height="12">
+                <use href="./images/icons.svg#error"></use>
+              </svg>
+              <span class="error-message"> Email is not valid. </span>
             </div>
 
-            <!-- Version 1 - HW -->
+            <label class="modal-form-label" for="user-phone">
+              Phone number
+            </label>
+            <div class="modal-form-field">
+              <input
+                class="modal-form-input"
+                type="text"
+                required
+                id="user-phone"
+                name="user-phone"
+              >
+              <svg class="modal-form-icon" width="13" height="13">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+
+            <label class="modal-form-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-form-comment"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+              rows="4"
+              required
+              minlength="10"
+              maxlength="2000"
+            ></textarea>
+
             <label class="modal-form-agreement">
               <input
                 class="visually-hidden"
