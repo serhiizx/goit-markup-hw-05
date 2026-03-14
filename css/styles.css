@@ -1019,22 +1019,27 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-input[type="checkbox"]:checked + .modal-form-checkbox {
-  background-color: #4d5ae5;
-  border-color: transparent;
+input[type="checkbox"]:checked
+  + .modal-form-checkbox-label
+  .modal-form-checkbox {
+  background-color: #404bbf;
+  fill: var(--color-light);
+  border: none;
 }
 .modal-form-checkbox-icon {
   opacity: 0;
   transition: opacity var(--anim-fast);
 }
 input[type="checkbox"]:checked
-  + .modal-form-checkbox
+  + .modal-form-checkbox-label
+  .modal-form-checkbox
   > .modal-form-checkbox-icon {
   opacity: 1;
 }
 .modal-form-link {
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  color: var(--color-primary-brand);
 }
 /* #endregion */
 
