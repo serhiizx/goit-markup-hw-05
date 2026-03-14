@@ -887,13 +887,17 @@ address {
   background-color: #404bbf;
   border: none;
   --color1: white;
+  fill: #ffffff;
 }
 
+.modal-close-btn-icon {
+  transform: scale(3);
+}
 .modal-close-btn-icon:focus,
+.modal-close-btn-icon:focus-within,
 .modal-close-btn-icon:hover {
-  background-color: #404bbf;
-  border-radius: 50%;
   border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-caption {
