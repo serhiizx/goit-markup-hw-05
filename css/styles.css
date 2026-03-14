@@ -799,6 +799,27 @@ address {
 /* #region Form */
 
 /* #region Dialog */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: bounding-box;
+  transition: opacity 250ms ease-in-out;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* #region Modal window */
 .backdrop {
   position: fixed;
@@ -830,7 +851,7 @@ address {
   opacity: 0;
 
   width: 517px;
-  padding: 40px;
+  padding: 72px 24px 24px 24px;
   border-radius: 4px;
 
   transition: 200ms ease-out;
@@ -878,46 +899,34 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
+  color: #2e2f42;
   margin-bottom: 16px;
 }
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.modal-form-wrapper {
-  margin-bottom: 18px;
-}
 
-.modal-form-field {
-  position: relative;
-  margin-bottom: 8px;
+.modal-form-wrapper {
+}
+.modal-form-label {
   display: block;
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+.modal-form-field {
+  position: relative;
+  margin-bottom: 8px;
+}
 .modal-form-input {
-  width: 264px;
-  height: 40px;
-  border: 1px solid #ffffff;
-  background-color: transparent;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  padding-left: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  color: #ffffff;
-
+  width: 100%;
   padding: 22px 40px;
+  font-size: 12px;
   color: #2e2f43;
 
   outline: transparent;
   border: 1px solid #2e2f4266;
+  border-radius: 4px;
 
   transition: var(--anim-fast);
   transition-property: border-color;
@@ -931,13 +940,15 @@ address {
 .modal-form-icon {
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%) translateX(19px);
+  transform: translateY(-50%);
   fill: currentColor;
   pointer-events: none;
-
-  transition: var(--anim-fast);
-  transition-property: fill;
+  opacity: 0;
+  transition: all var(--anim-fast);
+}
+.modal-form-icon.icon {
+  left: 19px;
+  opacity: 1;
 }
 .modal-form-input + .modal-form-icon {
   fill: #2e2f43;
@@ -976,7 +987,7 @@ address {
   display: flex;
   align-items: center;
 
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   color: rgba(64, 64, 64, 0.6);
 }
 .modal-form-checkbox {
@@ -1032,10 +1043,8 @@ input[type="checkbox"]:checked
 }
 
 .modal-form-icon.error {
-  transform: translateX(389px) translateY(-50%);
+  right: 19px;
   fill: transparent;
-  opacity: 0;
-  transition: opacity var(--anim-fast);
 }
 
 .modal-form-textarea:user-invalid,
