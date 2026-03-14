@@ -807,22 +807,24 @@ address {
   color: #ffffff;
   margin-bottom: 16px;
 }
-
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .modal-form-wrapper {
   margin-bottom: 18px;
 }
-.modal-form-label {
-  display: block;
+
+.modal-form-field {
+  position: relative;
   margin-bottom: 8px;
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-}
-.modal-form-field {
-  position: relative;
-  margin-bottom: 8px;
 }
 .modal-form-input {
   width: 100%;

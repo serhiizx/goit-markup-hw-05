@@ -552,15 +552,14 @@
           <p class="modal-caption">Subscribe</p>
 
           <form class="modal-form flex-col" name="review-form">
-            <label class="modal-form-label" for="user-name">Name</label>
-            <div class="modal-form-field">
+            <label class="modal-form-label">
+              Email
               <input
                 class="modal-form-input"
-                type="text"
-                id="user-name"
-                name="user-name"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
                 required
-                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
               >
               <svg class="modal-form-icon" width="12" height="12">
                 <use href="./images/icons.svg#user"></use>
@@ -571,7 +570,7 @@
               <span class="error-message">
                 Username must contain two words separated by space
               </span>
-            </div>
+            </label>
 
             <label class="modal-form-label" for="user-email">Email</label>
             <div class="modal-form-field">
