@@ -662,29 +662,32 @@
             ></textarea>
           </div>
 
-          <label class="modal-form-agreement">
+          <div class="modal-form-wrapper modal-agreements">
             <input
               class="visually-hidden"
               type="checkbox"
-              name="user-agreement"
-              value="false"
+              name="user-privacy"
+              value="true"
               checked
+              id="user-privacy"
             >
-            <span class="modal-form-checkbox">
-              <svg class="modal-form-checkbox-icon" width="8" height="8">
-                <use href="./images/icons.svg#checkmark"></use>
-              </svg>
-            </span>
-            I accept the terms and conditions of the &nbsp;
-            <a
-              class="modal-form-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy Policy
-            </a>
-          </label>
+            <label class="modal-form-checkbox-label" for="user-privacy">
+              <span class="modal-form-checkbox">
+                <svg class="modal-form-checkbox-icon" width="8" height="8">
+                  <use href="./images/icons.svg#checkmark"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the &nbsp;
+              <a
+                class="modal-form-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </label>
+          </div>
 
           <button class="button--accent self-center" type="submit">Send</button>
         </form>
