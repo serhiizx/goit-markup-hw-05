@@ -824,17 +824,14 @@ address {
 .backdrop {
   position: fixed;
   inset: 0;
-
   background-color: #2e2f4266;
   backdrop-filter: blur(2px);
-
-  transition: var(--anim-slow);
-  transition-property: opacity, visibility;
-  transition-delay: 200ms;
-
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -850,19 +847,17 @@ address {
   transform: translateX(-50%) translateY(-70%);
   opacity: 0;
 
-  width: 517px;
+  width: 408px;
+  min-height: 584px;
   padding: 72px 24px 24px 24px;
   border-radius: 4px;
-
-  transition: 200ms ease-out;
-  transition-property: transform, opacity;
-  transition-delay: 0ms;
 
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open .modal {
   transform: translateX(-50%) translateY(-50%);
@@ -879,16 +874,23 @@ address {
   justify-content: center;
   padding: 0;
   background-color: #e7e9fc;
-  transition: color var(--anim-fast);
 
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  border: 1px solid #d0d2e2;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn:hover,
+.modal-close-btn:hover {
+  background-color: #404bbf;
+  border: none;
+}
 .modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
 }
 .modal-close-btn-icon {
   fill: currentColor;
@@ -944,7 +946,7 @@ address {
   fill: currentColor;
   pointer-events: none;
   opacity: 0;
-  transition: all var(--anim-fast);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-icon.icon {
   left: 19px;
