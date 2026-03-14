@@ -547,127 +547,127 @@
             </li>
           </ul>
         </div>
+
+        <!-- Modal window -->
+        <div class="backdrop">
+          <div class="modal">
+            <p class="modal-caption">Subscribe</p>
+
+            <button class="modal-close-btn" type="button">
+              <svg class="modal-close-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+
+            <form class="modal-form flex-col" name="review-form">
+              <label class="modal-form-label" for="user-name">Name</label>
+              <div class="modal-form-field">
+                <input
+                  class="modal-form-input"
+                  type="text"
+                  id="user-name"
+                  name="user-name"
+                  required
+                  pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                >
+                <svg class="modal-form-icon" width="12" height="12">
+                  <use href="./images/icons.svg#user"></use>
+                </svg>
+                <svg class="modal-form-icon error" width="12" height="12">
+                  <use href="./images/icons.svg#error"></use>
+                </svg>
+                <span class="error-message">
+                  Username must contains two words separated by space
+                </span>
+              </div>
+
+              <div class="modal-form-wrapper">
+                <label class="modal-form-label" for="user-email">Email</label>
+                <div class="modal-form-field">
+                  <input
+                    class="modal-form-input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                    required
+                    placeholder=""
+                  >
+                  <svg class="modal-form-icon" width="12" height="12">
+                    <use href="./images/icons.svg#email"></use>
+                  </svg>
+                  <svg class="modal-form-icon error" width="12" height="12">
+                    <use href="./images/icons.svg#error"></use>
+                  </svg>
+                  <span class="error-message"> Email is not valid. </span>
+                </div>
+              </div>
+
+              <div class="modal-form-wrapper">
+                <label class="modal-form-label" for="user-phone">
+                  Phone number
+                </label>
+                <div class="modal-form-field">
+                  <input
+                    class="modal-form-input"
+                    type="text"
+                    required
+                    id="user-phone"
+                    name="user-phone"
+                  >
+                  <svg class="modal-form-icon" width="13" height="13">
+                    <use href="./images/icons.svg#phone"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="modal-form-wrapper">
+                <label class="modal-form-label" for="user-comment"
+                  >Comment</label
+                >
+                <textarea
+                  class="modal-form-comment"
+                  name="user-comment"
+                  id="user-comment"
+                  placeholder="Text input"
+                  rows="4"
+                  required
+                  minlength="10"
+                  maxlength="2000"
+                ></textarea>
+              </div>
+
+              <!-- Version 1 - HW -->
+              <label class="modal-form-agreement">
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="user-agreement"
+                  value="false"
+                  checked
+                >
+                <span class="modal-form-checkbox">
+                  <svg class="modal-form-checkbox-icon" width="8" height="8">
+                    <use href="./images/icons.svg#checkmark"></use>
+                  </svg>
+                </span>
+                I accept the terms and conditions of the &nbsp;
+                <a
+                  class="modal-form-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Privacy Policy
+                </a>
+              </label>
+
+              <button class="button--accent self-center" type="submit">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </footer>
-
-    <!-- Modal window -->
-    <div class="backdrop">
-      <div class="modal">
-        <button class="modal-close-btn" type="button">
-          <svg class="modal-close-btn-icon" width="24" height="24">
-            <use href="./images/icons.svg#close"></use>
-          </svg>
-        </button>
-
-        <p class="modal-caption">
-          Leave your contacts and we will call you back
-        </p>
-
-        <form class="modal-form flex-col" name="review-form">
-          <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="user-name">Name</label>
-            <div class="modal-form-field">
-              <input
-                class="modal-form-input"
-                type="text"
-                id="user-name"
-                name="user-name"
-                required
-                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-              >
-              <svg class="modal-form-icon" width="12" height="12">
-                <use href="./images/icons.svg#user"></use>
-              </svg>
-              <svg class="modal-form-icon error" width="12" height="12">
-                <use href="./images/icons.svg#error"></use>
-              </svg>
-              <span class="error-message">
-                Username must contains two words separated by space
-              </span>
-            </div>
-          </div>
-
-          <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="user-email">Email</label>
-            <div class="modal-form-field">
-              <input
-                class="modal-form-input"
-                type="email"
-                id="user-email"
-                name="user-email"
-                required
-                placeholder=""
-              >
-              <svg class="modal-form-icon" width="12" height="12">
-                <use href="./images/icons.svg#email"></use>
-              </svg>
-              <svg class="modal-form-icon error" width="12" height="12">
-                <use href="./images/icons.svg#error"></use>
-              </svg>
-              <span class="error-message"> Email is not valid. </span>
-            </div>
-          </div>
-
-          <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="user-phone">
-              Phone number
-            </label>
-            <div class="modal-form-field">
-              <input
-                class="modal-form-input"
-                type="text"
-                required
-                id="user-phone"
-                name="user-phone"
-              >
-              <svg class="modal-form-icon" width="13" height="13">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="modal-form-wrapper">
-            <label class="modal-form-label" for="user-comment">Comment</label>
-            <textarea
-              class="modal-form-comment"
-              name="user-comment"
-              id="user-comment"
-              placeholder="Text input"
-              rows="4"
-              required
-              minlength="10"
-              maxlength="2000"
-            ></textarea>
-          </div>
-
-          <!-- Version 1 - HW -->
-          <label class="modal-form-agreement">
-            <input
-              class="visually-hidden"
-              type="checkbox"
-              name="user-agreement"
-              value="false"
-              checked
-            >
-            <span class="modal-form-checkbox">
-              <svg class="modal-form-checkbox-icon" width="8" height="8">
-                <use href="./images/icons.svg#checkmark"></use>
-              </svg>
-            </span>
-            I accept the terms and conditions of the &nbsp;
-            <a
-              class="modal-form-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy Policy
-            </a>
-          </label>
-
-          <button class="button--accent self-center" type="submit">Send</button>
-        </form>
-      </div>
-    </div>
   </body>
 </html>
