@@ -775,7 +775,6 @@ address {
 }
 .form-button {
   display: flex;
-  gap: 16px;
   align-items: center;
 }
 .form-button-submit {
@@ -793,6 +792,9 @@ address {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+.form-button-icon {
+  margin-left: 16px;
 }
 /* #region Form */
 
