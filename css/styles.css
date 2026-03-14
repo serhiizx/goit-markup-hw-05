@@ -22,7 +22,6 @@
   --anim-fast: 200ms ease-in;
   --anim-slow: 500ms ease-out;
 
-  --color-success: green;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -701,30 +700,99 @@ address {
 .footer-socials-link-svg {
   fill: #f4f4fd;
 }
-/* #endregion Footer */
-
-/* #region Dialog */
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
+.subscribe-root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+.subscribe-button {
+  min-width: 165px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  pointer-events: bounding-box;
-  transition: opacity 250ms ease-in-out;
 }
-
-.modal-overlay.is-open {
+/* #endregion Footer */
+/* #endregion Form */
+.form {
+  display: flex;
+  gap: 24px;
+}
+.form-field {
+  position: relative;
+}
+.form-input {
+  border: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  color: #ffffff;
+  outline: transparent;
+}
+.form-input:user-invalid {
+  border: 1px solid #ff0000;
+}
+.form-input + .form-icon-error,
+.form-input ~ .form-error-message {
+}
+.form-input:user-invalid + .form-icon-error,
+.form-input:user-invalid ~ .form-error-message {
   opacity: 1;
-  pointer-events: auto;
 }
+.form-input:user-valid {
+  border: 1px solid var(--color-success);
+}
+.form-input::placeholder {
+  color: #ffffff;
+}
+.form-icon-error {
+  opacity: 0;
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 6px);
+}
+.form-error-message {
+  opacity: 0;
+  color: red;
+  display: flex;
+  padding: 0 16px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -22px;
+}
+.form-button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.form-button-submit {
+  border-radius: 4px;
+  padding-block: 8px;
+  padding-inline: 24px;
+  width: 165px;
+  height: 40px;
+  background: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/* #region Form */
 
+/* #region Dialog */
 /* #region Modal window */
 .backdrop {
   position: fixed;
@@ -827,14 +895,23 @@ address {
   color: #8e8f99;
 }
 .modal-form-input {
-  width: 100%;
-  padding: 22px 40px;
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
   font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+
+  padding: 22px 40px;
   color: #2e2f43;
 
   outline: transparent;
   border: 1px solid #2e2f4266;
-  border-radius: 4px;
 
   transition: var(--anim-fast);
   transition-property: border-color;
