@@ -998,19 +998,13 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-.modal-form-checkbox
-  input[type="checkbox"]:checked
-  + .modal-form-checkbox-label
-  > .modal-form-checkbox-span {
+.modal-form-checkbox input[type="checkbox"]:checked + label > span {
   border: none;
   background-color: var(--color-pressed);
   fill: var(--color-light);
 }
 .modal-form-checkbox
-  input[type="checkbox"]:checked
-  + .modal-form-checkbox-label
-  > .modal-form-checkbox-span
-  > .modal-form-checkbox-svg {
+  input[type="checkbox"]:checked + label > span > svg {
   opacity: 1;
 }
 .modal-form-checkbox .modal-form-checkbox-span {
