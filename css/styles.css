@@ -1027,11 +1027,9 @@ input[type="checkbox"]:checked {
   border: none;
 }
 input[type="checkbox"]:checked + label span {
-  border: 1px solid yellow;
-}
-input[type="checkbox"]:checked + label span {
   background-color: var(--color-pressed);
   fill: var(--color-light);
+  border: none;
 }
 input[type="checkbox"]:checked + label span svg {
   opacity: 1;
