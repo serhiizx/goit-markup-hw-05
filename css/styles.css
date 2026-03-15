@@ -1027,9 +1027,6 @@ address {
   transition: opacity var(--anim-fast);
 }
 
-textarea:focus {
-  border-color: #4D5AE5;
-}
 .modal-form-link {
   text-decoration: underline;
   text-decoration-skip-ink: none;
