@@ -1005,7 +1005,7 @@ address {
   margin-bottom: 24px;
   color: rgba(64, 64, 64, 0.6);
 }
-.modal-form-checkbox {
+.modal .modal-form-checkbox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1027,9 +1027,9 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-input[type="checkbox"]:checked span {
+.modal input[type="checkbox"]:checked span {
   border: none;
-  fill: #f4f4fd;
+  fill: #F4F4FD;
 }
 input[type="checkbox"]:checked
   + .modal-form-checkbox-label
@@ -1048,8 +1048,8 @@ input[type="checkbox"]:checked
   > .modal-form-checkbox-icon {
   opacity: 1;
 }
-.modal-form-textarea:focus {
-  border-color: #4d5ae5;
+.modal .modal-form-textarea:focus {
+  border-color: #4D5AE5;
 }
 .modal-form-link {
   text-decoration: underline;
