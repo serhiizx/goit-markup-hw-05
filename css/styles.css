@@ -9,7 +9,7 @@
   --color-text: #434455;
   --color-subtle-text: #8e8f99;
   --color-accent: #e7e9fc;
-  --color-light: #F4F4FD;
+  --color-light: #f4f4fd;
   --color-modal-overlay: #2e2f42;
   --color-hero-background: #2e2f42;
   --color-white-background: #ffffff;
@@ -989,7 +989,7 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .modal-form-comment:focus {
-  border-color: #4D5AE5;
+  border-color: #4d5ae5;
 }
 .modal-form-comment::placeholder {
   color: #4040404c;
@@ -1004,7 +1004,7 @@ address {
   color: var(--color-subtle-text);
 }
 .modal-form-checkbox input[type="checkbox"]:checked + label > span {
-  --color1: #404BBF;
+  --color1: #404bbf;
   border: none;
   background-color: var(--color1);
   fill: var(--color-light);
@@ -1034,11 +1034,11 @@ address {
 }
 
 .modal .modal-form-textarea:focus-within {
-  border-color: #4D5AE5;
+  border-color: #4d5ae5;
 }
 
 .modal .modal-form-textarea:focus {
-  border-color: #4D5AE5;
+  border-color: #4d5ae5;
 }
 .modal-form-link {
   text-decoration: underline;
