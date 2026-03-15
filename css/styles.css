@@ -989,7 +989,7 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .modal-form-comment:focus {
-  border-color: #4d5ae5;
+  border-color: var(--color-primary-brand);
 }
 .modal-form-comment::placeholder {
   color: #4040404c;
@@ -1004,9 +1004,8 @@ address {
   color: var(--color-subtle-text);
 }
 .modal-form-checkbox input[type="checkbox"]:checked + label > span {
-  --color1: #404bbf;
   border: none;
-  background-color: var(--color1);
+  background-color: var(--color-pressed);
   fill: var(--color-light);
 }
 .modal-form-checkbox input[type="checkbox"]:checked + label > span > svg {
