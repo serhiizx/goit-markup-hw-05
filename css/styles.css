@@ -1004,8 +1004,9 @@ address {
   color: var(--color-subtle-text);
 }
 .modal-form-checkbox input[type="checkbox"]:checked + label > span {
+  --color1: #404BBF;
   border: none;
-  background-color: var(--color-pressed);
+  background-color: var(--color1);
   fill: var(--color-light);
 }
 .modal-form-checkbox input[type="checkbox"]:checked + label > span > svg {
@@ -1032,6 +1033,10 @@ address {
   transition: opacity var(--anim-fast);
 }
 
+.modal .modal-form-textarea:focus-within {
+  border-color: #4D5AE5;
+}
+
 .modal .modal-form-textarea:focus {
   border-color: #4D5AE5;
 }
@@ -1043,26 +1048,6 @@ address {
 /* #endregion */
 
 /* #region Validation */
-.modal-form-textarea:user-invalid,
-.modal-form-input:user-invalid {}
-.modal-form-input:user-invalid + .modal-form-icon {}
-
-.modal-form-icon-error {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  right: 19px;
-  fill: transparent;
-}
-
-.modal-form-textarea:user-invalid,
-.modal-form-input:user-invalid ~ .modal-form-icon-error {
-  opacity: 1;
-}
-
 .error-message {
   position: absolute;
   bottom: 5px;
