@@ -866,7 +866,7 @@ address {
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
 }
-.modal-close-btn {
+.modal .modal-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -884,26 +884,24 @@ address {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn:focus {
+.modal .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
-  --color1: white;
   fill: #ffffff;
 }
-.modal-close-btn:hover {
+.modal .modal-close-btn:hover {
   background-color: #404bbf;
   border: none;
-  --color1: white;
   fill: #ffffff;
 }
 
-.modal-close-btn-icon {
+.modal .modal-close-btn-icon {
   transform: scale(3);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn-icon:focus,
-.modal-close-btn-icon:focus-within,
-.modal-close-btn-icon:hover {
+.modal .modal-close-btn-icon:focus,
+.modal .modal-close-btn-icon:focus-within,
+.modal .modal-close-btn-icon:hover {
   border: none;
 }
 
@@ -988,7 +986,6 @@ address {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  margin-bottom: 16px;
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
   padding: 8px 16px;
