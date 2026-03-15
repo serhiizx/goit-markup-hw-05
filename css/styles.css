@@ -950,7 +950,7 @@ address {
   --color1: #4e5ae5;
 }
 .modal-form-input:focus + svg {
-  fill: #4d5ae5;
+  fill: #4D5AE5;
 }
 
 .modal-form-icon {
@@ -968,7 +968,7 @@ address {
   fill: #2e2f43;
 }
 .modal-form-input:focus + .modal-form-icon {
-  fill: #4e5ae5;
+  fill: #4D5AE5;
 }
 .modal-form-comment {
   width: 100%;
