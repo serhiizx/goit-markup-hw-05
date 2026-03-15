@@ -1028,14 +1028,19 @@ address {
 input[type="checkbox"]:checked {
   border: none;
 }
-input[type="checkbox"]:checked + label span {
+input[type="checkbox"]:checked + label .modal-form-checkbox-span {
   background-color: var(--color-pressed);
   fill: var(--color-light);
   border: none;
 }
-input[type="checkbox"]:checked + label span svg {
+input[type="checkbox"]:checked + label .modal-form-checkbox-span .modal-form-checkbox-icon {
   opacity: 1;
 }
+
+input[type="checkbox"]:focus + label .modal-form-checkbox-span .modal-form-checkbox-icon {
+  fill: #4D5AE5;
+}
+
 .modal-form-link {
   text-decoration: underline;
   text-decoration-skip-ink: none;
