@@ -881,11 +881,15 @@ address {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn:hover,
+.modal-close-btn:hover {
+  background-color: #404bbf!important;
+  border: none!important;
+  fill: #ffffff!important;
+}
 .modal-close-btn:focus {
-  background-color: #404bbf;
-  border: none;
-  fill: #ffffff;
+  background-color: #404bbf!important;
+  border: none!important;
+  fill: #ffffff!important;
 }
 
 .modal-close-btn-icon {
@@ -984,7 +988,7 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .modal-form-comment:focus {
-  border-color: var(--color-primary-brand);
+  border-color: #4D5AE5;
 }
 .modal-form-comment::placeholder {
   color: #4040404c;
@@ -998,11 +1002,20 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-.modal-form-checkbox input[type="checkbox"]:checked:focus + label span {
+.modal-form-checkbox input[type="checkbox"]:checked + label span {
   border: none;
   background-color: var(--color-pressed);
 }
-.modal-form-checkbox input[type="checkbox"]:checked:focus + label svg {
+.modal-form-checkbox input[type="checkbox"]:checked + label svg {
+  opacity: 1;
+  fill: var(--color-light);
+}
+
+.modal-form-checkbox input[type="checkbox"]:focus + label span {
+  border: none;
+  background-color: var(--color-pressed);
+}
+.modal-form-checkbox input[type="checkbox"]:focus + label svg {
   opacity: 1;
   fill: var(--color-light);
 }
