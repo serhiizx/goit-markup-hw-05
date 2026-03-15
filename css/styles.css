@@ -1027,12 +1027,8 @@ address {
   transition: opacity var(--anim-fast);
 }
 
-.modal textarea:focus-within {
-  border-color: #4d5ae5;
-}
-
-.modal textarea:focus {
-  border-color: #4d5ae5;
+textarea:focus {
+  border-color: #4D5AE5;
 }
 .modal-form-link {
   text-decoration: underline;
