@@ -9,7 +9,7 @@
   --color-text: #434455;
   --color-subtle-text: #8e8f99;
   --color-accent: #e7e9fc;
-  --color-light: #f4f4fd;
+  --color-light: #F4F4FD;
   --color-modal-overlay: #2e2f42;
   --color-hero-background: #2e2f42;
   --color-white-background: #ffffff;
@@ -1029,17 +1029,14 @@ address {
 }
 .modal input[type="checkbox"]:checked + label span {
   border: none;
-  background-color: #404bbf;
+  background-color: var(--color-pressed);
   fill: var(--color-light);
 }
 .modal-form-checkbox-icon {
   opacity: 0;
   transition: opacity var(--anim-fast);
 }
-input[type="checkbox"]:checked
-  + .modal-form-checkbox-label
-  .modal-form-checkbox
-  > .modal-form-checkbox-icon {
+input[type="checkbox"]:checked + label span svg {
   opacity: 1;
 }
 .modal .modal-form-textarea:focus {
@@ -1059,14 +1056,6 @@ input[type="checkbox"]:checked
 }
 .modal-form-input:user-invalid + .modal-form-icon {
   fill: #e74a3b;
-}
-
-.modal-form-textarea:user-valid,
-.modal-form-input:user-valid {
-  border-color: var(--color-success);
-}
-.modal-form-input:user-valid + .modal-form-icon {
-  fill: var(--color-success);
 }
 
 .modal-form-icon-error {
