@@ -998,14 +998,15 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-.modal-form-checkbox input[type="checkbox"]:checked + label span {
+.modal-form-checkbox input[type="checkbox"]:checked:focus + label span {
   border: none;
   background-color: var(--color-pressed);
+}
+.modal-form-checkbox input[type="checkbox"]:checked:focus + label svg {
+  opacity: 1;
   fill: var(--color-light);
 }
-.modal-form-checkbox input[type="checkbox"]:checked + label svg {
-  opacity: 1;
-}
+
 .modal-form-checkbox .modal-form-checkbox-span {
   display: inline-flex;
   align-items: center;
