@@ -946,7 +946,7 @@ address {
   max-height: 40px;
 }
 .modal-form-input:focus {
-  border-color: #4d5ae5;
+  border-color: #4D5AE5;
   --color1: #4e5ae5;
 }
 .modal-form-input:focus + svg {
