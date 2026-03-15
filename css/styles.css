@@ -755,9 +755,6 @@ address {
 .form-input:user-invalid ~ .form-error-message {
   opacity: 1;
 }
-.form-input:user-valid {
-  border: 1px solid var(--color-success);
-}
 .form-input::placeholder {
   color: #ffffff;
 }
@@ -997,15 +994,24 @@ address {
 .modal-form-comment::placeholder {
   color: #4040404c;
 }
-.modal-agreements {
+.modal-form-checkbox {
   margin-bottom: 24px;
 }
-/* Custom checkbox */
-.modal-form-agreement {
-  margin-bottom: 24px;
-  color: rgba(64, 64, 64, 0.6);
+.modal-form-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-subtle-text);
 }
-.modal .modal-form-checkbox {
+.modal-form-checkbox input[type="checkbox"]:checked + label > span {
+  border: none;
+  background-color: var(--color-pressed);
+  fill: var(--color-light);
+}
+.modal-form-checkbox input[type="checkbox"]:checked + label > span > svg {
+  opacity: 1;
+}
+.modal-form-checkbox .modal-form-checkbox-span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1021,24 +1027,11 @@ address {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
 }
-.modal-form-checkbox-label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: var(--color-subtle-text);
-}
-.modal input[type="checkbox"]:checked + label span {
-  border: none;
-  background-color: var(--color-pressed);
-  fill: var(--color-light);
-}
-.modal-form-checkbox-icon {
+.modal-form-checkbox .modal-form-checkbox-icon {
   opacity: 0;
   transition: opacity var(--anim-fast);
 }
-input[type="checkbox"]:checked + label span svg {
-  opacity: 1;
-}
+
 .modal .modal-form-textarea:focus {
   border-color: #4D5AE5;
 }
@@ -1051,12 +1044,8 @@ input[type="checkbox"]:checked + label span svg {
 
 /* #region Validation */
 .modal-form-textarea:user-invalid,
-.modal-form-input:user-invalid {
-  border-color: #e74a3b;
-}
-.modal-form-input:user-invalid + .modal-form-icon {
-  fill: #e74a3b;
-}
+.modal-form-input:user-invalid {}
+.modal-form-input:user-invalid + .modal-form-icon {}
 
 .modal-form-icon-error {
   position: absolute;
