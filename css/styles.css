@@ -1059,7 +1059,6 @@ input[type="checkbox"]:checked + label span svg {
   transition: opacity var(--anim-fast);
 }
 
-textarea:user-invalid,
 .modal-form-input:user-invalid ~ .error-message {
   opacity: 1;
   transform: translateX(-50%) translateY(106%) scale(1);
