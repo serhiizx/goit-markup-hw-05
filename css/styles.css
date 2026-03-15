@@ -940,9 +940,8 @@ address {
 }
 .modal-form-input:focus {
   border-color: #4d5ae5;
-  --color1: #4e5ae5;
 }
-.modal-form-input:focus + svg {
+.modal-form-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
 
@@ -999,12 +998,19 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-.modal-form-checkbox input[type="checkbox"]:checked + label > span {
+.modal-form-checkbox
+  input[type="checkbox"]:checked
+  + .modal-form-checkbox-label
+  > .modal-form-checkbox-span {
   border: none;
   background-color: var(--color-pressed);
   fill: var(--color-light);
 }
-.modal-form-checkbox input[type="checkbox"]:checked + label > span > svg {
+.modal-form-checkbox
+  input[type="checkbox"]:checked
+  + .modal-form-checkbox-label
+  > .modal-form-checkbox-span
+  > .modal-form-checkbox-svg {
   opacity: 1;
 }
 .modal-form-checkbox .modal-form-checkbox-span {
