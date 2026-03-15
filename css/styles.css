@@ -998,13 +998,12 @@ address {
   letter-spacing: 0.04em;
   color: var(--color-subtle-text);
 }
-.modal-form-checkbox input[type="checkbox"]:checked + label > span {
+.modal-form-checkbox input[type="checkbox"]:checked + label span {
   border: none;
   background-color: var(--color-pressed);
   fill: var(--color-light);
 }
-.modal-form-checkbox
-  input[type="checkbox"]:checked + label > span > svg {
+.modal-form-checkbox input[type="checkbox"]:checked + label svg {
   opacity: 1;
 }
 .modal-form-checkbox .modal-form-checkbox-span {
@@ -1028,11 +1027,11 @@ address {
   transition: opacity var(--anim-fast);
 }
 
-.modal .modal-form-textarea:focus-within {
+.modal textarea:focus-within {
   border-color: #4d5ae5;
 }
 
-.modal .modal-form-textarea:focus {
+.modal textarea:focus {
   border-color: #4d5ae5;
 }
 .modal-form-link {
@@ -1058,7 +1057,7 @@ address {
   transition: opacity var(--anim-fast);
 }
 
-.modal-form-textarea:user-invalid,
+textarea:user-invalid,
 .modal-form-input:user-invalid ~ .error-message {
   opacity: 1;
   transform: translateX(-50%) translateY(106%) scale(1);
