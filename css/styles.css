@@ -631,7 +631,6 @@ address {
 }
 
 .footer .container {
-  gap: 120px;
   display: flex;
   align-items: baseline;
   width: 100%;
@@ -707,6 +706,7 @@ address {
   display: flex;
   flex: 1;
   flex-direction: column;
+  margin-left: 80px;
 }
 .subscribe-title {
   font-weight: 500;
@@ -1032,6 +1032,9 @@ address {
   background-color: var(--color-pressed);
   border: none;
   fill: var(--color-light);
+}
+.modal input[type="checkbox"]:checked + label span .modal-form-checkbox-icon {
+  opacity: 1;
 }
 
 .modal-form-link {
